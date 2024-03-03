@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Footer } from '@/Components/Blocks/Footer/Footer.tsx';
 
 interface DefaultLayoutProps {
   children: ReactNode;
@@ -9,7 +10,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <>
       <h1>Navigation</h1>
       {children}
-      <h1>Footer</h1>
+      <Footer />
     </>
   );
 };
