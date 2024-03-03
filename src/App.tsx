@@ -1,7 +1,9 @@
+import { DefaultLayout } from '@Components/Blocks/DefaultLayout/DefaultLayout';
+
 export const App = () => {
   return (
-    <div>
-      <h1>Hello, world!</h1>
-    </div>
+    <DefaultLayout>
+      <h1>Home</h1>
+    </DefaultLayout>
   );
 };
