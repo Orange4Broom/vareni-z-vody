@@ -1,17 +1,22 @@
+@import '@/colors.scss';
+
 .navigation {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 12px;
-  background-color: bisque;
+  padding: 12px 60px;
+  transition: all ease-in-out 250ms;
 
   &__logo {
     position: absolute;
     left: 60px;
+    font-size: 140%;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $nav-text-color-dark;
   }
 
   &__menu {
@@ -19,5 +24,90 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+
+    &__link {
+      font-size: 14px;
+      font-weight: 500;
+      color: $nav-text-color-light;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: $nav-text-color-dark;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1.4px;
+        width: 100%;
+        background-color: #444;
+        width: 0%;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all ease-in-out 250ms;
+      }
+
+      &:hover::after {
+        width: 80%;
+      }
+
+      &--active {
+        font-size: 14px;
+        font-weight: 500;
+        color: $nav-text-color-dark;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 1.4px;
+          width: 80%;
+          background-color: #444;
+          margin-left: auto;
+          margin-right: auto;
+          transition: all ease-in-out 200ms;
+        }
+      }
+    }
+  }
+
+  &__burger-menu {
+    display: none;
   }
 }
+
+  @media (max-width: 840px){
+    .navigation {
+      justify-content: flex-end;
+       transition: all ease-in-out 250ms;
+    }
+  }
+
+  @media (max-width: 640px){
+    .navigation {
+      padding: 12px 24px;
+
+      &__logo {
+        left: 24px;
+      }
+
+      &__menu {
+      display: none;
+    }
+
+    &__burger-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: none;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 100;
+      color: $nav-text-color-dark;
+      cursor: pointer;
+    }
+    }
+  }
