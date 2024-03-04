@@ -1,0 +1,23 @@
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  background-color: bisque;
+
+  &__logo {
+    position: absolute;
+    left: 60px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
