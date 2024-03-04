@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { Footer } from '@/Components/Blocks/Footer/Footer.tsx';
-import { Navigation } from '@/Components/Blocks/Navigation/Navigation.tsx';
+import { Footer } from '@/Components/Blocks/Footer/Footer';
+import { Navigation } from '@/Components/Blocks/Navigation/Navigation';
 
 import './defaultLayout.scss';
 

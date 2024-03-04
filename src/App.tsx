@@ -1,9 +1,14 @@
-import { DefaultLayout } from '@Components/Blocks/DefaultLayout/DefaultLayout';
+import { Routes, Route } from 'react-router-dom';
+import { Menu } from '@/Pages/Menu';
+import { Rate } from '@/Pages/Rate';
+import { Order } from './Pages/Order';
 
 export const App = () => {
   return (
-    <DefaultLayout>
-      <h1>Home</h1>
-    </DefaultLayout>
+    <Routes>
+      <Route path="/" element={<Menu />} />
+      <Route path="/rate" element={<Rate />} />
+      <Route path="/order" element={<Order />} />
+    </Routes>
   );
 };
