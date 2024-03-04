@@ -1,9 +1,10 @@
-import { DefaultLayout } from '@Components/Blocks/DefaultLayout/DefaultLayout';
+import { Routes, Route } from 'react-router-dom';
+import { Menu } from '@/Pages/Menu';
 
 export const App = () => {
   return (
-    <DefaultLayout>
-      <h1>Home</h1>
-    </DefaultLayout>
+    <Routes>
+      <Route path="/" element={<Menu />} />
+    </Routes>
   );
 };
